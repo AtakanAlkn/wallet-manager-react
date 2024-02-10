@@ -1,14 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
 .label{
     margin-bottom: 5px;
+    margin-top: 20px;
     color: rgb(70, 69, 69);
 }
 .input {
-    margin-bottom: 10px;
     padding: 8px;
     border: none; 
     border-bottom: 1px solid rgb(180, 177, 177); 
 }
 .input::placeholder {
     color:rgb(180, 177, 177); /* Placeholder rengini kırmızı yapar */
-  }
-  
+}
+.errorMessage{
+    color: red;
+    margin-top: 2px;
+}
+.button{
+    border-radius: 10px;
+    border-width: 0;
+    padding: 10px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #0062ff, #da61ff);
+    color: white;
+}
+.button:hover {
+    background: rgba(26, 21, 94, 0.479);
+}

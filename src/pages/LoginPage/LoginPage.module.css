@@ -22,6 +22,7 @@
         hsl(221deg 29% 13%) 100%
       );
 }
+
 h1{
     text-align: center;
 }
@@ -32,12 +33,25 @@ h1{
     box-sizing: border-box;
     padding: 40px 20px;
     width: 30%;
-    height: 70%; 
+    height: 80%; 
     min-width: 300px;
     max-width: 400px;
     min-height: 600px;
     border-radius: 10px;
     background-color: white;
+    -webkit-box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
+    -moz-box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
+    box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
+   
+}
+.img{
+    width: 200px;
+    margin: 0 auto;
+    transition: transform 1s ease;
+}
+/* Hover animation */
+.img:hover{
+    transform: scale(1.2);  
 }
 .topContainer{
      display: flex;
@@ -46,6 +60,7 @@ h1{
 .forgot{
     text-align: right;
     color: rgb(70, 69, 69);
+  
 }
 .button{
     border-radius: 10px;

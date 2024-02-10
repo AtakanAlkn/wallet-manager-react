@@ -4,19 +4,21 @@ import { FcGoogle } from "react-icons/fc";
 import { BsTwitter } from "react-icons/bs";
 import OrLine from "./components/OrLine";
 import Input from "./components/Input/Input";
+import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.png";
 
 //Giriş Sayfası
 const LoginPage = () => {
-  console.log(styles);
+  const onLogin = () => {};
   return (
     <div className={styles.container}>
       <div className={styles.inputContainer}>
+        <img src={logo} className={styles.img} />
         <div className={styles.topContainer}>
           <h1>Giriş Yap</h1>
-          <Input title="Kullanıcı Adı" placeHolder="Kullanıcı adınızı girin" />
-          <Input title="Şifre" placeHolder="Şifrenizi girin" />
+          {/*Form Validation*/}
+          <Input />
           <p className={styles.forgot}>Şifreni mi unuttun?</p>
-          <button className={styles.button}>Giriş Yap</button>
         </div>
         <div className={styles.bottomContainer}>
           <OrLine />
