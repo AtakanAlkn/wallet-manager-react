@@ -1,0 +1,14 @@
+.label{
+    margin-bottom: 5px;
+    color: rgb(70, 69, 69);
+}
+.input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: none; 
+    border-bottom: 1px solid rgb(180, 177, 177); 
+}
+.input::placeholder {
+    color:rgb(180, 177, 177); /* Placeholder rengini kırmızı yapar */
+  }
+  

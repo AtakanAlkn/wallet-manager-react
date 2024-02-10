@@ -1,7 +1,11 @@
+import React from "react";
+import "./App.css";
+import LoginPage from "./pages/LoginPage/LoginPage";
+
 const App = () => {
   return (
-    <div>
-      <h1>Test</h1>
+    <div className="fullScreen">
+      <LoginPage />
     </div>
   );
 };

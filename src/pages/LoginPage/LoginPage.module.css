@@ -1,0 +1,65 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 800px;
+    padding: 0;
+    margin: 0;
+    /*Gradient Renk Kodları */
+    background-image: linear-gradient(
+        45deg,
+        hsl(228deg 92% 76%) 0%,
+        hsl(230deg 89% 73%) 10%,
+        hsl(232deg 86% 70%) 20%,
+        hsl(235deg 84% 67%) 30%,
+        hsl(237deg 83% 63%) 40%,
+        hsl(240deg 82% 59%) 50%,
+        hsl(240deg 64% 53%) 60%,
+        hsl(239deg 56% 46%) 70%,
+        hsl(239deg 55% 39%) 80%,
+        hsl(237deg 52% 29%) 90%,
+        hsl(221deg 29% 13%) 100%
+      );
+}
+h1{
+    text-align: center;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    width: 30%;
+    height: 70%; 
+    min-width: 300px;
+    max-width: 400px;
+    min-height: 600px;
+    border-radius: 10px;
+    background-color: white;
+}
+.topContainer{
+     display: flex;
+    flex-direction: column;
+}
+.forgot{
+    text-align: right;
+    color: rgb(70, 69, 69);
+}
+.button{
+    border-radius: 10px;
+    border-width: 0;
+    padding: 10px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #0062ff, #da61ff);
+    color: white;
+}
+.bottomContainer{
+    text-align: center;
+}
+.iconContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
