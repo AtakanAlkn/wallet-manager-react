@@ -13,7 +13,7 @@
     border-bottom: 1px solid rgb(180, 177, 177); 
 }
 .input::placeholder {
-    color:rgb(180, 177, 177); /* Placeholder rengini kırmızı yapar */
+    color:rgb(180, 177, 177); 
 }
 .errorMessage{
     color: red;

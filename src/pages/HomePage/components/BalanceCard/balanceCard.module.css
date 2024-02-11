@@ -1,0 +1,46 @@
+.horizontalContainer{
+    display: flex;
+    flex: 3;
+}
+/* Toplam bakiye */
+.balance{
+    -webkit-box-shadow: 10px 3px 23px -7px rgba(17,13,84,1);
+    -moz-box-shadow: 10px 3px 23px -7px rgba(17,13,84,1);
+    box-shadow: 10px 3px 23px -7px rgba(17,13,84,1);
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: linear-gradient(90deg, #1e45882f, #2d2faa98);
+    justify-content: center;
+    align-items: center;
+}
+/* Gelir */
+.income{
+    -webkit-box-shadow: 10px 3px 23px -7px rgba(27,82,24,1);
+    -moz-box-shadow: 10px 3px 23px -7px rgba(27,82,24,1);
+    box-shadow: 10px 3px 23px -7px rgba(27,82,24,1);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: linear-gradient(90deg, #14963b3a, #06421060);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+/* Gider */
+.expense{
+    -webkit-box-shadow: 10px 3px 23px -7px rgba(112,39,12,1);
+    -moz-box-shadow: 10px 3px 23px -7px rgba(112,39,12,1);
+    box-shadow: 10px 3px 23px -7px rgba(112,39,12,1);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: linear-gradient(90deg, #e62f0f3a, #7e05054d);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}

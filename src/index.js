@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import LoginPage from "./pages/LoginPage/LoginPage";
-import MainPage from "./pages/MainPage/MainPage";
+import HomePage from "./pages/HomePage/HomePage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import SettingsPage from "./pages/SettingsPage/SettingsPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
+import { Provider } from "react-redux";
+import { store } from "./redux/app/store";
 
 const router = createBrowserRouter([
   {
@@ -13,20 +16,25 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/login",
-    element: <LoginPage />,
+    path: "/home",
+    element: <HomePage />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/main",
-    element: <MainPage />,
+    path: "/profile",
+    element: <ProfilePage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/settings",
+    element: <SettingsPage />,
     errorElement: <ErrorPage />,
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </Provider>
 );

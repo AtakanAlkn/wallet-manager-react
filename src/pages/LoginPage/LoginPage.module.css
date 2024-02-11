@@ -21,11 +21,12 @@
         hsl(237deg 52% 29%) 90%,
         hsl(221deg 29% 13%) 100%
       );
+      overflow: auto;
 }
-
 h1{
     text-align: center;
 }
+/* Form */
 .inputContainer{
     display: flex;
     flex-direction: column;
@@ -60,8 +61,8 @@ h1{
 .forgot{
     text-align: right;
     color: rgb(70, 69, 69);
-  
 }
+/* Buton */
 .button{
     border-radius: 10px;
     border-width: 0;

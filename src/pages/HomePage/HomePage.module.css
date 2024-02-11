@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    box-sizing: border-box;
+    padding: 5% 10% 5% 15%;
+    width: 100vw;
+}
+.innerContainer{ 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+.topContainer{ 
+    border: 1px solid black;
+    -webkit-box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
+    -moz-box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
+    box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
+    color: rgb(83, 83, 83);
+    border-radius: 10px;  
+    margin: 20px; 
+    padding: 10px 40px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #273f6807, #c262e010);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 3;
+    overflow: auto;
+}
+/* Gelir Gider Ekleme */
+.bottomContainer{
+    display: flex;
+    justify-content: space-between;
+    flex: 6;
+}
+/* Medya Sorguları */
+@media screen and (max-width: 600px) {
+    .horizontalContainer {
+      flex-direction: column;
+    }
+    .bottomContainer{
+        flex-direction: column;
+    }
+  }

@@ -2,14 +2,12 @@ import styles from "./LoginPage.module.css";
 import { FaFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { BsTwitter } from "react-icons/bs";
-import OrLine from "./components/OrLine";
+import OrDivider from "./components/OrDivider";
 import Input from "./components/Input/Input";
-import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 
 //Giriş Sayfası
 const LoginPage = () => {
-  const onLogin = () => {};
   return (
     <div className={styles.container}>
       <div className={styles.inputContainer}>
@@ -21,7 +19,7 @@ const LoginPage = () => {
           <p className={styles.forgot}>Şifreni mi unuttun?</p>
         </div>
         <div className={styles.bottomContainer}>
-          <OrLine />
+          <OrDivider />
           <div className={styles.iconContainer}>
             <FcGoogle size={30} />
             <FaFacebook size={30} color=" #316FF6." />

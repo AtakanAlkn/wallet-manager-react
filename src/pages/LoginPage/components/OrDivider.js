@@ -1,7 +1,7 @@
-//Giriş yapma kutusu içerisindeki veya çizgisi
+//OrDivider
 //Styled component ile de oluşturulabilir TODO
 
-const OrLine = () => {
+const OrDivider = () => {
   return (
     <div style={{ display: "flex" }}>
       <hr
@@ -21,4 +21,4 @@ const OrLine = () => {
   );
 };
 
-export default OrLine;
+export default OrDivider;

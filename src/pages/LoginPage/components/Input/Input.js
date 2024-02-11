@@ -24,7 +24,7 @@ const Input = () => {
           const { email, password } = values;
           if (email === "johndoe@gmail.com" && password === "john123") {
             // Başarılı giriş durumunda ana sayfaya yönlendir
-            navigate("/main");
+            navigate("/home");
           } else {
             // Başarısız giriş durumunda hata mesajı göster
             alert("Geçersiz e-posta veya şifre");
