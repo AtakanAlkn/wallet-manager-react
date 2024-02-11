@@ -18,19 +18,34 @@ const MySideNav = () => {
           <NavIcon>
             <i className="fa fa-fw fa-home" style={{ fontSize: "1.75em" }} />
           </NavIcon>
-          <NavText>Home</NavText>
+          <NavText>Ana Sayfa</NavText>
         </NavItem>
-        <NavItem eventKey="profile">
+        <NavItem eventKey="transaction">
           <NavIcon>
-            <i className="fa-solid fa-user" style={{ fontSize: "1.75em" }} />
+            <i
+              className="fa-solid fa-clock-rotate-left"
+              style={{ fontSize: "1.75em" }}
+            />
           </NavIcon>
-          <NavText>Profile</NavText>
+          <NavText>İşlem Geçmişi</NavText>
         </NavItem>
-        <NavItem eventKey="settings">
+        <NavItem eventKey="income">
           <NavIcon>
-            <i className="fa-solid fa-gear" style={{ fontSize: "1.75em" }} />
+            <i
+              className="fa-regular fa-square-plus"
+              style={{ fontSize: "1.75em" }}
+            />
           </NavIcon>
-          <NavText>Settings</NavText>
+          <NavText>Gelirler</NavText>
+        </NavItem>
+        <NavItem eventKey="expense">
+          <NavIcon>
+            <i
+              className="fa-regular fa-square-minus"
+              style={{ fontSize: "1.75em" }}
+            />
+          </NavIcon>
+          <NavText>Gİderler</NavText>
         </NavItem>
       </SideNav.Nav>
     </SideNav>

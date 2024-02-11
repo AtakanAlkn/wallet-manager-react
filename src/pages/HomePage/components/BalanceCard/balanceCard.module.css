@@ -15,6 +15,12 @@
     background: linear-gradient(90deg, #1e45882f, #2d2faa98);
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    color: black;
+    transition: transform 1s ease;
+}
+.balance:hover{
+    transform: scale(1.1);  
 }
 /* Gelir */
 .income{
@@ -29,6 +35,12 @@
     border-radius: 10px;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    color: black;
+    transition: transform 1s ease;
+}
+.income:hover{
+    transform: scale(1.1);  
 }
 /* Gider */
 .expense{
@@ -43,4 +55,10 @@
     border-radius: 10px;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    color: black;
+    transition: transform 1s ease;
+}
+.expense:hover{
+    transform: scale(1.1);  
 }

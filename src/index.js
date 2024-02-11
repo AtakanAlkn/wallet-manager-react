@@ -2,13 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import HomePage from "./pages/HomePage/HomePage";
-import ProfilePage from "./pages/ProfilePage/ProfilePage";
-import SettingsPage from "./pages/SettingsPage/SettingsPage";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ExpensePage from "./pages/ExpensePage/ExpensePage";
+import IncomePage from "./pages/IncomePage/IncomePage";
+import TransactionPage from "./pages/TransactionPage/TransactionPage";
 import ErrorPage from "./ErrorPage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/app/store";
 
+//Router
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,13 +23,18 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/profile",
-    element: <ProfilePage />,
+    path: "/transaction",
+    element: <TransactionPage />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/settings",
-    element: <SettingsPage />,
+    path: "/expense",
+    element: <ExpensePage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/income",
+    element: <IncomePage />,
     errorElement: <ErrorPage />,
   },
 ]);

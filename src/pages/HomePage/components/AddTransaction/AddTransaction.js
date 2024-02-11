@@ -66,7 +66,7 @@ const AddTransaction = () => {
         <option value="income">Gelir</option>
         <option value="expense">Gider</option>
       </select>
-      <button className={styles.input} onClick={handleAddTransaction}>
+      <button className={styles.button} onClick={handleAddTransaction}>
         Ekle
       </button>
     </div>

@@ -1,12 +1,12 @@
 import MySideNav from "../../components/MySideNav";
 
-const ProfilePage = () => {
+const ExpensePage = () => {
   return (
     <div>
       <MySideNav />
-      <h1>ProfilePage</h1>
+      <h1>ExpensePage</h1>
     </div>
   );
 };
 
-export default ProfilePage;
+export default ExpensePage;

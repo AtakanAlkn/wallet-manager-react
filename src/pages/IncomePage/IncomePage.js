@@ -1,12 +1,12 @@
 import MySideNav from "../../components/MySideNav";
 
-const SettingsPage = () => {
+const IncomePage = () => {
   return (
     <div>
       <MySideNav />
-      <h1>SettingsPage</h1>
+      <h1>IncomePage</h1>
     </div>
   );
 };
 
-export default SettingsPage;
+export default IncomePage;
