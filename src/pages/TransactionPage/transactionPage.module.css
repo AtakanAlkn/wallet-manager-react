@@ -1,87 +1,36 @@
-.list {
-    display: flex; 
-    flex: 3;
+.container{
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid rgba(133, 130, 130, 0.39);
-    border-radius: 10px;
-    margin: 20px; 
-    padding: 20px;
+    padding: 5% 10%;
+}
+.innerContainer{
+    display: flex; 
+    flex-direction: column;
     color: rgb(83, 83, 83);
     overflow-y: auto;
-    max-height: 317px;
-    -webkit-box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
-    -moz-box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
-    box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
+    max-height: 600px;
 }
-.card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-/*Başlık ve sil butonu */
-.cardHeader {
+.emptySection{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
-/* İçerik */
-.cardBody {
-    margin-top: 10px;
+.header{
+    text-align: center;
+    color: rgb(136, 20, 20);
 }
 .text{
+    text-align: center;
+    color: black;
     font-weight: bold;
+    font-size: 20px;
 }
-/* Gelir */
-.incomeCard {
-    border: 2px solid #28a745;
+.img{
+    width: 200px;
+    margin: 0 auto;
+    transition: transform 1s ease;
 }
- /* Gider */ 
-.expenseCard {
-    border: 2px solid #dc3545;
-}
- /* Buton */ 
-.deleteButton {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-.deleteButton:hover {
-    background-color: #c82333;
-}
-.sortButtons {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-  
-.sortButton button {
-    margin-right: 10px;
-    background-color:#5dbea3;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-  
-.sortButton button:hover {
-    background-color: #397262;
-}
-  
-.filterDropdown select {
-    background-color: #5dbea3;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-  
-.filterDropdown select:hover {
-    background-color: #397262;
+/* Hover animation */
+.img:hover{
+    transform: scale(1.2);  
 }

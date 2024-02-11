@@ -1,0 +1,38 @@
+.add{  
+    border: 1px solid rgba(133, 130, 130, 0.39);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(83, 83, 83);
+    -webkit-box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
+    -moz-box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
+    box-shadow: 0px 0px 34px -2px rgba(5,0,5,1);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400;
+    background-color: white;
+}
+.input{
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 0.2px;
+    margin-bottom: 10px;
+}
+.button{
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 0.2px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    background: linear-gradient(90deg, #192ac4a8, #9e9fdf98);
+    color: white;
+    font-weight: bold;
+}
+.button:hover{
+    background-color: red;
+    cursor: pointer;
+}

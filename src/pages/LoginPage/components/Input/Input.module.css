@@ -28,5 +28,5 @@
     color: white;
 }
 .button:hover {
-    background: rgba(26, 21, 94, 0.479);
+    background: linear-gradient(90deg, #013485, #7a368f);
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./HomePage.module.css";
-import MySideNav from "../../components/MySideNav";
+import MySideNav from "../../components/SideNav/MySideNav";
 import TransactionList from "./components/TransactionList/TransactionList";
 import BalanceCard from "./components/BalanceCard/BalanceCard";
 import AddTransaction from "./components/AddTransaction/AddTransaction";

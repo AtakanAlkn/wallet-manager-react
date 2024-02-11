@@ -1,4 +1,4 @@
-import MySideNav from "../../components/MySideNav";
+import MySideNav from "../../components/SideNav/MySideNav";
 
 const IncomePage = () => {
   return (

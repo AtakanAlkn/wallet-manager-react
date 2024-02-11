@@ -13,7 +13,7 @@ const LoginPage = () => {
       <div className={styles.inputContainer}>
         <img src={logo} className={styles.img} />
         <div className={styles.topContainer}>
-          <h1>Giriş Yap</h1>
+          <h1 className={styles.header}>Giriş Yap</h1>
           {/*Form Validation*/}
           <Input />
           <p className={styles.forgot}>Şifreni mi unuttun?</p>

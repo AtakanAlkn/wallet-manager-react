@@ -1,5 +1,3 @@
-// transactionSlice.js
-
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -8,7 +6,7 @@ const initialState = {
   income: 0,
   expense: 0,
   sortByDateAscending: true,
-  filter: "all", // Filtre değeri başlangıçta "all" olarak ayarlanır
+  filter: "all",
 };
 
 export const transactionSlice = createSlice({
@@ -47,10 +45,46 @@ export const transactionSlice = createSlice({
     setFilter: (state, action) => {
       state.filter = action.payload;
     },
+    updateTransaction: (state, action) => {
+      const { id, title, description, amount, type, date } = action.payload;
+      const index = state.transactions.findIndex(
+        (transaction) => transaction.id === id
+      );
+      if (index !== -1) {
+        const oldTransaction = state.transactions[index];
+        state.transactions[index] = {
+          id,
+          title,
+          description,
+          amount,
+          type,
+          date,
+        };
+        if (oldTransaction.type === "income") {
+          state.income -= oldTransaction.amount;
+          state.balance -= oldTransaction.amount;
+        } else {
+          state.expense -= oldTransaction.amount;
+          state.balance += oldTransaction.amount;
+        }
+        if (type === "income") {
+          state.income += amount;
+          state.balance += amount;
+        } else {
+          state.expense += amount;
+          state.balance -= amount;
+        }
+      }
+    },
   },
 });
 
-export const { addTransaction, deleteTransaction, toggleSortOrder, setFilter } =
-  transactionSlice.actions;
+export const {
+  addTransaction,
+  deleteTransaction,
+  toggleSortOrder,
+  setFilter,
+  updateTransaction,
+} = transactionSlice.actions;
 
 export default transactionSlice.reducer;
