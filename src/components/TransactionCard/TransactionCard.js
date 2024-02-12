@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./transactionCard.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -9,7 +9,15 @@ import {
 } from "../../redux/features/transactionSlice";
 import BasicModal from "../../utils/modal/BasicModal";
 
-const TransactionCard = () => {
+const TransactionCard = ({ isFilter = true, a }) => {
+  // Gelir gider listeleme filtre
+  useEffect(() => {
+    if (a) {
+      dispatch(setFilter(a));
+    } else {
+      dispatch(setFilter("all"));
+    }
+  }, []);
   const dispatch = useDispatch();
 
   // Redux store'dan işlemleri al
@@ -46,6 +54,7 @@ const TransactionCard = () => {
     dispatch(toggleSortOrder());
   };
 
+  //Dropdown menu
   const handleFilterChange = (e) => {
     dispatch(setFilter(e.target.value));
   };
@@ -76,13 +85,15 @@ const TransactionCard = () => {
                 Tarihe göre sırala
               </button>
             </div>
-            <div className={styles.filterDropdown}>
-              <select onChange={handleFilterChange} value={filter}>
-                <option value="all">Hepsini göster</option>
-                <option value="income">Gelirleri göster</option>
-                <option value="expense">Giderleri göster</option>
-              </select>
-            </div>
+            {isFilter && (
+              <div className={styles.filterDropdown}>
+                <select onChange={handleFilterChange} value={filter}>
+                  <option value="all">Hepsini göster</option>
+                  <option value="income">Gelirleri göster</option>
+                  <option value="expense">Giderleri göster</option>
+                </select>
+              </div>
+            )}
           </div>
         </div>
         <div className={styles.cardsContainer}>

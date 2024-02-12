@@ -17,6 +17,8 @@ email : **johndoe@gmail.com**
     <img src="images/m1.png" alt="Giriş Sayfası" style="border: 1px solid black; margin-bottom: 10px;">
     <img src="images/m2.png" alt="Ana Sayfa" style="border: 1px solid black; margin-bottom: 10px;">
     <img src="images/m3.png" alt="İşlem Geçmişi" style="border: 1px solid black; margin-bottom: 10px;">
+    <img src="images/m5.png" alt="Gelir Geçmişi" style="border: 1px solid black; margin-bottom: 10px;">
+    <img src="images/m4.png" alt="Boş Gelir Geçmişi" style="border: 1px solid black; margin-bottom: 10px;">
 </div>
 
 ## Özellikler
