@@ -10,24 +10,29 @@ import {
 import BasicModal from "../../utils/modal/BasicModal";
 
 const TransactionCard = () => {
+  const dispatch = useDispatch();
+
+  // Redux store'dan işlemleri al
   const transactions = useSelector((state) => state.transactions.transactions);
   const sortByDateAscending = useSelector(
     (state) => state.transactions.sortByDateAscending
   );
 
-  const dispatch = useDispatch();
-
+  // Filtreleme
   const filter = useSelector((state) => state.transactions.filter);
 
+  // İşlemi sil
   const handleDeleteTransaction = (id) => {
     dispatch(deleteTransaction(id));
   };
 
-  /* Düzenleme */
+  // İşlemi düzenle
   const [editingTransaction, setEditingTransaction] = useState(null);
   const handleEditTransaction = (transaction) => {
     setEditingTransaction(transaction);
   };
+
+  // Kaydet
   const handleSaveEdit = () => {
     if (!editingTransaction) return;
 
@@ -36,24 +41,25 @@ const TransactionCard = () => {
     setEditingTransaction(null);
   };
 
+  // Tarihe göre sıralama toggle
   const handleSortOrderToggle = () => {
     dispatch(toggleSortOrder());
   };
 
   const handleFilterChange = (e) => {
-    dispatch(setFilter(e.target.value)); // Filtre değerini güncelle
+    dispatch(setFilter(e.target.value));
   };
 
   // Filtreleme
   const filteredTransactions = transactions.filter((transaction) => {
     if (filter === "all") {
-      return true; // Tüm liste
+      return true;
     } else {
       return transaction.type === filter;
     }
   });
 
-  // Tarih sıralama
+  // Sıralama
   const sortedTransactions = [...filteredTransactions].sort((a, b) => {
     return sortByDateAscending
       ? new Date(a.date) - new Date(b.date)
@@ -122,54 +128,12 @@ const TransactionCard = () => {
           ))}
         </div>
       </div>
-      {/* Düzenleme modalı */}
       {editingTransaction && (
-        <div className={styles.modal}>
-          <h2>İşlemi Düzenle</h2>
-          <input
-            type="text"
-            value={editingTransaction.title}
-            onChange={(e) =>
-              setEditingTransaction({
-                ...editingTransaction,
-                title: e.target.value,
-              })
-            }
-          />
-          <input
-            type="text"
-            value={editingTransaction.description}
-            onChange={(e) =>
-              setEditingTransaction({
-                ...editingTransaction,
-                description: e.target.value,
-              })
-            }
-          />
-          <input
-            type="number"
-            value={editingTransaction.amount}
-            onChange={(e) =>
-              setEditingTransaction({
-                ...editingTransaction,
-                amount: parseFloat(e.target.value),
-              })
-            }
-          />
-          <select
-            value={editingTransaction.type}
-            onChange={(e) =>
-              setEditingTransaction({
-                ...editingTransaction,
-                type: e.target.value,
-              })
-            }
-          >
-            <option value="income">Gelir</option>
-            <option value="expense">Gider</option>
-          </select>
-          <button onClick={handleSaveEdit}>Kaydet</button>
-        </div>
+        <BasicModal
+          editingTransaction={editingTransaction}
+          setEditingTransaction={setEditingTransaction}
+          handleSaveEdit={handleSaveEdit}
+        />
       )}
     </div>
   );

@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Wallet Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Genel Bakış
 
-## Available Scripts
+**Wallet Manager** kullanıcıların gelir ve giderlerini kaydedebilecekleri, düzenleyebilecekleri ve silebilecekleri bir kişisel gider takip uygulamasıdır.
 
-In the project directory, you can run:
+## Uyarı
 
-### `npm start`
+_Herhangi bir veritabanı bulunmadığı için form girişleri statik bir şekilde sağlanmıştır._ Login ekranında giriş yapabilmek için gerekli bilgiler :
+email : **johndoe@gmail.com**
+şifre : **john123**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Ön İzleme
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<div style="display: flex; flex-direction: column;">
+    <img src="images/h1.gif" alt="Giriş Sayfası" style="border: 1px solid black; margin-bottom: 10px;">
+    <img src="images/m1.png" alt="Giriş Sayfası" style="border: 1px solid black; margin-bottom: 10px;">
+    <img src="images/m2.png" alt="Ana Sayfa" style="border: 1px solid black; margin-bottom: 10px;">
+    <img src="images/m3.png" alt="İşlem Geçmişi" style="border: 1px solid black; margin-bottom: 10px;">
+</div>
 
-### `npm test`
+## Özellikler
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- :white_check_mark: **Ana Sayfa:** Kullanıcı bu sayfada toplam gelir, toplam gider ve net bakiyeyi görebilir.
 
-### `npm run build`
+- :white_check_mark: **Gelir/Gider Ekleme:** Kullanıcılar, gelir veya gider ekleyebilir. Her işlem için; miktar, açıklama ve tarih bilgileri kaydedilir.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- :white_check_mark: **Gelir/Gider Listeleme:** Eklenen gelir ve giderler, ayrı listeler halinde kullanıcıya sunulur.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- :white_check_mark: **Gelir/Gider Düzenleme/Silme:** Kullanıcılar, mevcut gelir veya gider kayıtlarını düzenleyebilir veya silebilir.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- :white_check_mark: **Navigasyon:** Kullanıcılar, ana sayfa ve gelir/gider listeleme sayfaları arasında
+  gezinebilir.
 
-### `npm run eject`
+- :white_check_mark: **Form Doğrulama:** Form doğrulama işlemleri Formik kullanılarak gerçekleştirilmiştir. Bu sayede kullanıcılar form alanlarına veri girişi yaparken hata kontrolü sağlanmış ve kullanıcı dostu geri bildirimler sunulmuştur.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Kullanılan Teknolojiler
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React:** Kullanıcı arayüzünü modüler bir şekilde oluşturmak için React kullanılmıştır.
+- **Redux:** Uygulama genelindeki durum yönetimi ve veri paylaşımı Redux kullanılarak sağlanmıştır.
+- **React Router:** Sayfa yönlendirmesi ve yönetimi için React Router kullanılmıştır, bu sayede kullanıcılar farklı bileşenler arasında kolayca gezinebilirler.
+- **CSS:** Uygulamanın stilini belirlemek ve görünümünü düzenlemek için CSS kullanılmıştır.
+- **Formik:** Form işlemlerinin kolay ve verimli bir şekilde yönetilmesi için Formik kütüphanesi kullanılmıştır.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contact
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you have any questions, suggestions, or just want to connect, you can reach me at:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Email: alkan.atakan@outlook.com
+- LinkedIn: [Atakan Alkan](https://www.linkedin.com/in/atakanalkn/)
